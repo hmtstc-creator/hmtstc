@@ -1,1 +1,0 @@
-# HMTSTC core package

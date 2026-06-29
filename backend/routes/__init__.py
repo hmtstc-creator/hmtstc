@@ -1,1 +1,0 @@
-# HMTSTC API routes package
