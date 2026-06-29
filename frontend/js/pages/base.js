@@ -1,1 +1,0 @@
-window.HMTSTC_PAGES = window.HMTSTC_PAGES || {};
