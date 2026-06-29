@@ -1,0 +1,16 @@
+[Unit]
+Description=HMTSTC Backend API
+After=network.target
+
+[Service]
+Type=simple
+User=hmtstc
+Group=www-data
+WorkingDirectory=/var/www/hmtstc/backend
+EnvironmentFile=-/var/www/hmtstc/backend/.env
+ExecStart=/var/www/hmtstc/backend/venv/bin/uvicorn main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

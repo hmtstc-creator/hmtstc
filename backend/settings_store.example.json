@@ -1,0 +1,8 @@
+{
+  "users": {},
+  "global": {
+    "bot_enabled_default": false,
+    "live_trading_default": false,
+    "emergency_stop": true
+  }
+}

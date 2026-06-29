@@ -1,0 +1,38 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-14T22:32:37.940571+00:00",
+  "storage_whitelist_has_filter_rejection_counts": true,
+  "storage_whitelist_has_volume_rejection_diagnostics": true,
+  "storage_whitelist_has_liquidity_rejection_diagnostics": true,
+  "sync_last_scan_state_keeps_full_scan_before_normalize": true,
+  "normalize_preserves_filter_rejection_counts": true,
+  "normalize_preserves_min_quote_volume_zero_count": true,
+  "normalize_preserves_volume_diagnostics": true,
+  "normalize_preserves_liquidity_diagnostics": true,
+  "normalize_preserves_scan_rows": true,
+  "normalize_preserves_candidates": true,
+  "normalize_preserves_pipeline": true,
+  "saved_last_scan_sample": {
+    "filter_rejection_counts": {
+      "min_quote_volume": 0,
+      "min_trade_count": 0,
+      "min_volatility": 1,
+      "quality_score_min": 307,
+      "lightweight_score_min": 344,
+      "stable_pair_guard": 9,
+      "leveraged_token_guard": 2
+    },
+    "volume_rejection_diagnostics": {
+      "effective_min_quote_volume": 1,
+      "low_quote_volume_count": 0,
+      "sample_low_quote_volume": []
+    },
+    "liquidity_rejection_diagnostics": {
+      "effective_min_quote_volume": 1,
+      "low_liquidity_count": 0
+    },
+    "scan_rows_count": 2,
+    "candidates_count": 1
+  },
+  "blockers": []
+}

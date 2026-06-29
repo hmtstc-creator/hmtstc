@@ -1,0 +1,24 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-10T18:39:29.691672+00:00",
+  "auth_store_static_tmp_absent": true,
+  "auth_store_unique_tmp_present": true,
+  "auth_store_lock_present": true,
+  "auth_store_atomic_replace_present": true,
+  "auth_store_write_error_handled": true,
+  "frontend_login_double_submit_guard_present": true,
+  "frontend_login_button_disabled_present": true,
+  "frontend_login_500_clears_token_present": true,
+  "api_401_403_not_backend_offline": true,
+  "api_login_in_progress_blocks_sync": true,
+  "prior_40_16_status": "ok",
+  "prior_40_17_status": "ok",
+  "blockers": [],
+  "review_items": [],
+  "recommended_next_actions": [
+    "Keep auth_store writes on unique tmp files under RLock.",
+    "Keep login double-submit guard active until sync completes.",
+    "Do not stage runtime auth_store or tmp files.",
+    "Run 40.18 before Paket 11."
+  ]
+}

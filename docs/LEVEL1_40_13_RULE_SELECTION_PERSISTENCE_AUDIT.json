@@ -1,0 +1,33 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-10T09:28:26.972614+00:00",
+  "source_dashboard_js": "frontend\\js\\pages\\dashboard.js",
+  "source_rules_js": "frontend\\js\\app\\rules.js",
+  "source_frontend_inventory": "docs\\LEVEL1_40_07_FRONTEND_API_INVENTORY.json",
+  "source_contract_diff": "docs\\LEVEL1_40_08_API_CONTRACT_DIFF.json",
+  "source_owner_approval_contract": "docs\\LEVEL1_40_12_OWNER_APPROVAL_CONTRACT_AUDIT.json",
+  "frontend_call_count": 89,
+  "dashboard_explicit_selection_guard": true,
+  "all_active_fallback_guarded": true,
+  "selection_saving_state_present": true,
+  "response_filter_selection_verified": true,
+  "response_strategy_selection_verified": true,
+  "draft_cleared_after_verified_success": true,
+  "draft_preserved_on_error": true,
+  "double_submit_guard_present": true,
+  "activate_paper_lab_call_present": true,
+  "contract_missing_path_count": 0,
+  "contract_method_mismatch_count": 0,
+  "owner_approval_contract_status": "ok",
+  "runtime_leak_count": 0,
+  "tracked_runtime_store_count": 0,
+  "unignored_runtime_store_count": 0,
+  "blockers": [],
+  "review_items": [],
+  "recommended_next_actions": [
+    "Run this audit after 40.12 before changing Dashboard rule selection behavior.",
+    "Keep backend response selection mismatch visible to the user and preserve the draft.",
+    "Do not clear dashboardRuleSelectionDraft before selected_filter_ids and selected_strategy_ids are verified.",
+    "Keep live-trade, Binance, order executor, Futures and strategy/filter decision logic out of this package."
+  ]
+}

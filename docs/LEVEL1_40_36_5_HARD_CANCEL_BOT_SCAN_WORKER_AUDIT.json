@@ -1,0 +1,36 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-14T18:59:09.067862+00:00",
+  "first_tick_lightweight_mode_present": true,
+  "first_tick_does_not_use_deep_analysis": true,
+  "start_endpoint_is_non_blocking": true,
+  "scan_worker_state_fields_present": true,
+  "scan_worker_runs_in_separate_thread": true,
+  "scan_worker_generation_guard_present": true,
+  "timeout_cancels_scan_worker": true,
+  "stop_and_emergency_cancel_worker": true,
+  "failed_state_cpu_guard_present": true,
+  "scan_loop_cancel_deadline_guard_present": true,
+  "deep_analysis_cancel_deadline_guard_present": true,
+  "strategy_filter_cancel_guard_present": true,
+  "deep_network_timeout_uses_remaining_deadline": true,
+  "public_market_timeout_at_most_three_seconds": true,
+  "last_scan_endpoint_is_cached_read": true,
+  "dashboard_bundle_does_not_start_scan": true,
+  "frontend_start_success_message_present": true,
+  "coinfilter_cached_empty_message_present": true,
+  "scheduler_uses_light_first_tick_and_background_worker": true,
+  "prior_40_36_3_and_40_36_4_ok": true,
+  "generation_guard_probe": {
+    "matching_generation_allowed": true,
+    "stale_generation_blocked": true,
+    "stopped_request_blocked": true,
+    "failed_engine_blocked": true,
+    "cancel_state_blocked": true
+  },
+  "prior_audit_statuses": {
+    "40.36.3": "ok",
+    "40.36.4": "ok"
+  },
+  "blockers": []
+}

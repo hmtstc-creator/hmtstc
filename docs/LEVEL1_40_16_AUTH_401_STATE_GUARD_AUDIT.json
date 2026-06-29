@@ -1,0 +1,24 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-10T18:38:19.896954+00:00",
+  "auth_typo_hmtststc_absent": true,
+  "auth_logout_safe_app_guard_present": true,
+  "auth_logout_401_ignored_present": true,
+  "api_get_auth_headers_safe_app_guard_present": true,
+  "api_401_not_backend_offline": true,
+  "api_401_preserve_rules_present": true,
+  "api_handle_unauthorized_stops_sync_present": true,
+  "rules_401_preserve_last_good_present": true,
+  "dashboard_auth_expired_status_present": true,
+  "rule_selection_persistence_status": "ok",
+  "rule_backend_stability_status": "ok",
+  "system_status_runtime_store_status": "ok",
+  "blockers": [],
+  "review_items": [],
+  "recommended_next_actions": [
+    "Keep 401/auth-expired separate from backend_offline in user-facing status.",
+    "Preserve last successful rules payload when auth expires.",
+    "Keep logout tolerant of /api/auth/logout returning 401.",
+    "Run 40.16 after 40.13, 40.14 and 40.15 before Paket 11."
+  ]
+}

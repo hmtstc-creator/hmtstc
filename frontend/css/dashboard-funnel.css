@@ -1,0 +1,1100 @@
+/* =========================================================
+   HMTSTC Dashboard Final Layout v3
+   - Outer frame preserved
+   - Bot scan inner boxes compacted
+   - Top 6 boxes in single row
+   - Lower content pulled upward to fit
+   ========================================================= */
+
+/* =========================================================
+   DASHBOARD PAGE FRAME
+   ========================================================= */
+
+.dashboard-flat-page,
+.dashboard-jarvis-page {
+  --dash-gap: 10px;
+  --dash-pad-x: 14px;
+  --dash-pad-y: 10px;
+  --dash-left-w: 250px;
+  --dash-right-w: 560px;
+  --dash-height: 770px;
+
+  position: relative !important;
+  box-sizing: border-box !important;
+  width: min(1910px, calc(100vw - 24px)) !important;
+  max-width: 1910px !important;
+  height: var(--dash-height) !important;
+  min-height: var(--dash-height) !important;
+  max-height: var(--dash-height) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: #06101c !important;
+}
+
+.product-workspace,
+.product-page-host,
+.page.dashboard-fit,
+.shell-page.product-page-host {
+  overflow: hidden !important;
+}
+
+.product-page-host:has(.dashboard-flat-page),
+.page.dashboard-fit:has(.dashboard-flat-page),
+.shell-page.product-page-host:has(.dashboard-flat-page) {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.dashboard-flat-page::before,
+.dashboard-flat-page::after,
+.dashboard-jarvis-page::before,
+.dashboard-jarvis-page::after,
+.dashboard-jarvis-bg,
+.dashboard-eq-core,
+.dashboard-ai-core,
+.dashboard-ai-core-canvas,
+.dashboard-ai-core-rings,
+.dashboard-eq-orb,
+.dashboard-jarvis-stage::before,
+.dashboard-jarvis-stage::after {
+  display: none !important;
+}
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.dashboard-jarvis-stage {
+  position: relative !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: var(--dash-height) !important;
+  display: grid !important;
+  grid-template-columns: var(--dash-left-w) minmax(0, 1fr) var(--dash-right-w) !important;
+  grid-template-rows: minmax(0, 50fr) minmax(0, 30fr) minmax(0, 20fr) !important;
+  gap: var(--dash-gap) !important;
+  padding: var(--dash-pad-y) var(--dash-pad-x) !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+  background: #06101c !important;
+  overflow: hidden !important;
+}
+
+/* =========================================================
+   SHARED PANEL STYLE
+   ========================================================= */
+
+.dash-jarvis-panel {
+  position: relative !important;
+  inset: auto !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  border: 1px solid rgba(85, 217, 255, 0.34) !important;
+  border-radius: 8px !important;
+  background: rgba(4, 16, 29, 0.94) !important;
+  box-shadow: inset 0 0 28px rgba(34, 146, 198, 0.045) !important;
+  padding: 12px !important;
+  overflow: hidden !important;
+  z-index: 2 !important;
+}
+
+.dash-jarvis-panel h3 {
+  margin: 0 0 10px 0 !important;
+  color: #f0fbff !important;
+  font-size: 15px !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+/* =========================================================
+   AREA 1 — LEFT STACK
+   ========================================================= */
+
+.dashboard-left-stack {
+  grid-column: 1 !important;
+  grid-row: 1 / 4 !important;
+  display: grid !important;
+  grid-template-rows: 330px minmax(0, 1fr) !important;
+  gap: var(--dash-gap) !important;
+  box-sizing: border-box !important;
+  width: var(--dash-left-w) !important;
+  min-width: var(--dash-left-w) !important;
+  max-width: var(--dash-left-w) !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.dashboard-left-stack .dash-jarvis-panel.wallet {
+  width: 100% !important;
+  height: 330px !important;
+  min-height: 330px !important;
+  max-height: 330px !important;
+  padding: 11px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-left-stack .dash-jarvis-panel.rules {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding: 11px !important;
+  overflow: hidden !important;
+}
+
+.dash-jarvis-panel.wallet,
+.dash-jarvis-panel.rules {
+  grid-column: auto !important;
+  grid-row: auto !important;
+  max-width: none !important;
+}
+
+.dash-jarvis-line {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 8px !important;
+  align-items: center !important;
+  min-height: 21px !important;
+  padding: 4px 0 !important;
+  border-bottom: 1px solid rgba(85, 217, 255, 0.10) !important;
+}
+
+.dash-jarvis-line:last-child {
+  border-bottom: 0 !important;
+}
+
+.dash-jarvis-line span {
+  color: rgba(208, 240, 251, 0.78) !important;
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+}
+
+.dash-jarvis-line b {
+  color: #ffffff !important;
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+  text-align: right !important;
+}
+
+.dashboard-rules-head {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 0 8px 0 !important;
+}
+
+.dashboard-rules-head h3 {
+  margin: 0 !important;
+  color: #f0fbff !important;
+  font-size: 12px !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.03em !important;
+  text-transform: uppercase !important;
+}
+
+.dashboard-rules-save {
+  padding: 5px 8px !important;
+  font-size: 9px !important;
+  line-height: 1 !important;
+  border-radius: 6px !important;
+  min-height: 24px !important;
+}
+
+.dashboard-rule-lists {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+  height: calc(100% - 32px) !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: hidden !important;
+}
+
+.dashboard-rule-lists > div {
+  min-width: 0 !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: auto !important;
+  padding-right: 3px !important;
+}
+
+.dashboard-rule-lists > div > b {
+  display: block !important;
+  margin: 0 0 8px 0 !important;
+  color: #c9f5ff !important;
+  font-size: 9px !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+.jarvis-toggle-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 12px !important;
+  gap: 5px !important;
+  align-items: start !important;
+  padding: 5px 0 !important;
+  font-size: 9px !important;
+  line-height: 1.15 !important;
+}
+
+.jarvis-toggle-row span {
+  min-width: 0 !important;
+  color: #eefcff !important;
+  font-size: 9px !important;
+  line-height: 1.15 !important;
+  font-weight: 800 !important;
+  word-break: break-word !important;
+}
+
+.jarvis-toggle-row input[type="checkbox"] {
+  width: 12px !important;
+  height: 12px !important;
+  min-width: 12px !important;
+  margin: 0 !important;
+}
+
+/* =========================================================
+   AREA 2 — BOT SCAN SUMMARY
+   ========================================================= */
+
+.dash-jarvis-panel.scan-funnel {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Top 6 boxes now single row */
+.dashboard-funnel-flow {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  grid-template-rows: 1fr !important;
+  gap: 8px !important;
+  height: 20% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.dashboard-funnel-step {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  border: 1px solid rgba(85, 217, 255, 0.25) !important;
+  border-radius: 10px !important;
+  background: rgba(5, 20, 36, 0.88) !important;
+  padding: 9px 10px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-funnel-index {
+  position: absolute !important;
+  right: 8px !important;
+  top: 7px !important;
+  width: 21px !important;
+  height: 21px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(85, 217, 255, 0.45) !important;
+  color: #85e8ff !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+}
+
+.dashboard-funnel-step b {
+  display: block !important;
+  margin: 0 0 4px 0 !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+}
+
+.dashboard-funnel-step strong {
+  display: block !important;
+  color: #c7f6ff !important;
+  font-size: 10px !important;
+  line-height: 1.15 !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+.dashboard-funnel-step em {
+  display: block !important;
+  margin-top: 5px !important;
+  color: rgba(203, 237, 248, 0.70) !important;
+  font-size: 9px !important;
+  line-height: 1.2 !important;
+  font-style: normal !important;
+}
+
+/* Pull lower content upward */
+.dashboard-breakdown-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+  height: 50% !important;
+  margin-top: 8px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-breakdown-list,
+.dashboard-breakdown-grid .jarvis-empty-mini {
+  height: 100% !important;
+  min-height: 0 !important;
+  border: 1px solid rgba(85, 217, 255, 0.17) !important;
+  border-radius: 8px !important;
+  background: rgba(2, 12, 23, 0.72) !important;
+  padding: 9px !important;
+  overflow: auto !important;
+}
+
+.dashboard-breakdown-list > b,
+.dashboard-breakdown-grid .jarvis-empty-mini b {
+  display: block !important;
+  margin-bottom: 6px !important;
+  color: #e9fbff !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+}
+
+.dashboard-breakdown-list div {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 8px !important;
+  align-items: center !important;
+  padding: 5px 0 !important;
+  border-top: 1px solid rgba(85, 217, 255, 0.10) !important;
+}
+
+.dashboard-breakdown-list span,
+.dashboard-breakdown-grid .jarvis-empty-mini span {
+  color: rgba(218, 244, 252, 0.72) !important;
+  font-size: 10px !important;
+  line-height: 1.25 !important;
+}
+
+.dashboard-breakdown-list strong {
+  color: #ffffff !important;
+  font-size: 11px !important;
+}
+
+.dashboard-main-block-reason {
+  height: calc(24% - 16px) !important;
+  min-height: 44px !important;
+  margin-top: 8px !important;
+  border: 1px solid rgba(255, 196, 87, 0.30) !important;
+  border-radius: 8px !important;
+  background: rgba(30, 20, 6, 0.52) !important;
+  padding: 7px 9px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-main-block-reason span {
+  display: block !important;
+  color: rgba(255, 218, 137, 0.78) !important;
+  font-size: 9px !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase !important;
+}
+
+.dashboard-main-block-reason b {
+  display: block !important;
+  margin-top: 4px !important;
+  color: #fff1c7 !important;
+  font-size: 12px !important;
+  line-height: 1.25 !important;
+}
+
+/* =========================================================
+   AREA 3 — DECISION FUNNEL
+   ========================================================= */
+
+.dash-jarvis-panel.decision-funnel {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.dashboard-system-status-strip {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 5px !important;
+  margin-top: 8px !important;
+  height: 170px !important;
+  overflow: auto !important;
+}
+
+.dashboard-system-status-item {
+  display: grid !important;
+  grid-template-columns: 76px minmax(0, 1fr) !important;
+  grid-template-rows: auto auto !important;
+  column-gap: 6px !important;
+  row-gap: 2px !important;
+  align-items: center !important;
+  min-height: 25px !important;
+  border: 1px solid rgba(85, 217, 255, 0.15) !important;
+  border-radius: 7px !important;
+  background: rgba(4, 15, 28, 0.62) !important;
+  padding: 4px 6px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-system-status-item.status-good {
+  border-color: rgba(87, 218, 148, 0.34) !important;
+}
+
+.dashboard-system-status-item.status-warn {
+  border-color: rgba(255, 196, 87, 0.36) !important;
+}
+
+.dashboard-system-status-item.status-bad {
+  border-color: rgba(255, 110, 110, 0.46) !important;
+  background: rgba(35, 13, 17, 0.42) !important;
+}
+
+.dashboard-system-status-item.status-idle {
+  border-color: rgba(158, 178, 190, 0.24) !important;
+}
+
+.dashboard-system-status-item span {
+  grid-row: 1 / 3 !important;
+  color: rgba(208, 240, 251, 0.70) !important;
+  font-size: 8px !important;
+  line-height: 1.05 !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+.dashboard-system-status-item b {
+  min-width: 0 !important;
+  color: #ffffff !important;
+  font-size: 10px !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.dashboard-system-status-item small {
+  min-width: 0 !important;
+  color: rgba(204, 238, 249, 0.60) !important;
+  font-size: 8px !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.dashboard-decision-subtitle {
+  margin: -4px 0 7px 0 !important;
+  color: rgba(208, 240, 251, 0.74) !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+}
+
+.dashboard-decision-final {
+  display: grid !important;
+  grid-template-columns: 82px minmax(0, 1fr) !important;
+  gap: 8px !important;
+  align-items: center !important;
+  min-height: 28px !important;
+  margin-bottom: 7px !important;
+  border: 1px solid rgba(255, 196, 87, 0.24) !important;
+  border-radius: 8px !important;
+  background: rgba(30, 20, 6, 0.40) !important;
+  padding: 6px 8px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-decision-final span {
+  color: rgba(255, 218, 137, 0.78) !important;
+  font-size: 9px !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+.dashboard-decision-final b {
+  min-width: 0 !important;
+  color: #fff1c7 !important;
+  font-size: 10.5px !important;
+  line-height: 1.25 !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.dashboard-decision-stages {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+  height: 76px !important;
+  min-height: 76px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-decision-stage {
+  min-width: 0 !important;
+  height: 76px !important;
+  border: 1px solid rgba(85, 217, 255, 0.18) !important;
+  border-radius: 8px !important;
+  background: rgba(5, 20, 36, 0.76) !important;
+  padding: 7px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-decision-stage.status-ok {
+  border-color: rgba(87, 218, 148, 0.34) !important;
+}
+
+.dashboard-decision-stage.status-warning {
+  border-color: rgba(255, 196, 87, 0.34) !important;
+}
+
+.dashboard-decision-stage.status-blocked {
+  border-color: rgba(255, 110, 110, 0.40) !important;
+  background: rgba(35, 13, 17, 0.46) !important;
+}
+
+.dashboard-decision-stage.status-unknown {
+  border-color: rgba(158, 178, 190, 0.25) !important;
+}
+
+.dashboard-decision-stage > div {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 5px !important;
+  align-items: center !important;
+}
+
+.dashboard-decision-stage strong {
+  min-width: 0 !important;
+  color: #e9fbff !important;
+  font-size: 9px !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.dashboard-decision-stage span {
+  border: 1px solid rgba(85, 217, 255, 0.24) !important;
+  border-radius: 6px !important;
+  color: #c9f5ff !important;
+  background: rgba(2, 12, 23, 0.72) !important;
+  padding: 2px 4px !important;
+  font-size: 8px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+}
+
+.dashboard-decision-stage p {
+  margin: 6px 0 4px 0 !important;
+  color: rgba(218, 244, 252, 0.78) !important;
+  font-size: 9px !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+}
+
+.dashboard-decision-stage p b {
+  color: #ffffff !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+}
+
+.dashboard-decision-stage p em {
+  color: rgba(218, 244, 252, 0.62) !important;
+  font-style: normal !important;
+}
+
+.dashboard-decision-stage small {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  color: rgba(204, 238, 249, 0.62) !important;
+  font-size: 8.5px !important;
+  line-height: 1.18 !important;
+  overflow: hidden !important;
+}
+
+.dashboard-decision-table-wrap {
+  width: 100% !important;
+  height: 65px !important;
+  min-height: 65px !important;
+  margin-top: 7px !important;
+  border: 1px solid rgba(85, 217, 255, 0.16) !important;
+  border-radius: 8px !important;
+  overflow: auto !important;
+}
+
+.dashboard-decision-table {
+  width: 100% !important;
+  min-width: 720px !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+}
+
+.dashboard-decision-table th {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 2 !important;
+  background: rgba(3, 15, 27, 0.98) !important;
+  color: #bfeeff !important;
+  text-align: left !important;
+  padding: 5px 6px !important;
+  border-bottom: 1px solid rgba(85, 217, 255, 0.18) !important;
+  font-size: 8px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+.dashboard-decision-table td {
+  padding: 5px 6px !important;
+  border-bottom: 1px solid rgba(85, 217, 255, 0.09) !important;
+  color: #d8f5ff !important;
+  font-size: 9px !important;
+  line-height: 1.15 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.dashboard-decision-table td b {
+  color: #ffffff !important;
+}
+
+.dashboard-decision-table th:nth-child(1),
+.dashboard-decision-table td:nth-child(1) { width: 13% !important; }
+
+.dashboard-decision-table th:nth-child(2),
+.dashboard-decision-table td:nth-child(2),
+.dashboard-decision-table th:nth-child(3),
+.dashboard-decision-table td:nth-child(3),
+.dashboard-decision-table th:nth-child(4),
+.dashboard-decision-table td:nth-child(4),
+.dashboard-decision-table th:nth-child(5),
+.dashboard-decision-table td:nth-child(5),
+.dashboard-decision-table th:nth-child(6),
+.dashboard-decision-table td:nth-child(6) { width: 10% !important; }
+
+.dashboard-decision-table th:nth-child(7),
+.dashboard-decision-table td:nth-child(7) { width: 37% !important; }
+
+.dashboard-decision-reasons {
+  display: flex !important;
+  gap: 5px !important;
+  align-items: center !important;
+  height: 22px !important;
+  margin-top: 6px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-decision-reasons span {
+  min-width: 0 !important;
+  max-width: 32% !important;
+  border: 1px solid rgba(85, 217, 255, 0.14) !important;
+  border-radius: 999px !important;
+  background: rgba(2, 12, 23, 0.62) !important;
+  color: rgba(218, 244, 252, 0.75) !important;
+  padding: 4px 7px !important;
+  font-size: 8.5px !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.dashboard-decision-reasons b {
+  color: #ffffff !important;
+}
+
+.dashboard-decision-empty {
+  height: calc(100% - 25px) !important;
+}
+
+/* =========================================================
+   AREA 4 — NO TRADE REASON
+   ========================================================= */
+
+.dash-jarvis-panel.no-trade {
+  grid-column: 2 !important;
+  grid-row: 3 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.dashboard-no-trade-log {
+  display: grid !important;
+  gap: 6px !important;
+  height: calc(100% - 27px) !important;
+  overflow: auto !important;
+}
+
+.dashboard-no-trade-log div {
+  display: grid !important;
+  grid-template-columns: 64px minmax(0, 1fr) !important;
+  gap: 10px !important;
+  align-items: start !important;
+  padding: 7px 9px !important;
+  border: 1px solid rgba(85, 217, 255, 0.15) !important;
+  border-radius: 8px !important;
+  background: rgba(5, 18, 32, 0.70) !important;
+}
+
+.dashboard-no-trade-log span {
+  color: #80e5ff !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+}
+
+.dashboard-no-trade-log b {
+  color: #eefcff !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+}
+
+/* =========================================================
+   AREA 5 — TRADE HISTORY
+   ========================================================= */
+
+.dash-jarvis-panel.history {
+  grid-column: 3 !important;
+  grid-row: 1 / 4 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  overflow: hidden !important;
+}
+
+.dashboard-trade-table-wrap {
+  width: 100% !important;
+  height: calc(100% - 31px) !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+.dashboard-trade-table {
+  width: 100% !important;
+  min-width: 0 !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  font-size: 11px !important;
+}
+
+.dashboard-trade-table th {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 3 !important;
+  background: rgba(3, 15, 27, 0.98) !important;
+  color: #bfeeff !important;
+  text-align: left !important;
+  padding: 9px 6px !important;
+  border-bottom: 1px solid rgba(85, 217, 255, 0.26) !important;
+  font-size: 8.5px !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.dashboard-trade-table td {
+  padding: 8px 6px !important;
+  border-bottom: 1px solid rgba(85, 217, 255, 0.11) !important;
+  color: #d8f5ff !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-size: 10px !important;
+}
+
+.dashboard-trade-table td b {
+  color: #ffffff !important;
+}
+
+.dashboard-trade-table th:nth-child(1),
+.dashboard-trade-table td:nth-child(1) { width: 15% !important; }
+
+.dashboard-trade-table th:nth-child(2),
+.dashboard-trade-table td:nth-child(2) { width: 13% !important; }
+
+.dashboard-trade-table th:nth-child(3),
+.dashboard-trade-table td:nth-child(3) { width: 13% !important; }
+
+.dashboard-trade-table th:nth-child(4),
+.dashboard-trade-table td:nth-child(4) { width: 13% !important; }
+
+.dashboard-trade-table th:nth-child(5),
+.dashboard-trade-table td:nth-child(5) { width: 12% !important; }
+
+.dashboard-trade-table th:nth-child(6),
+.dashboard-trade-table td:nth-child(6) { width: 12% !important; }
+
+.dashboard-trade-table th:nth-child(7),
+.dashboard-trade-table td:nth-child(7) { width: 22% !important; }
+
+/* =========================================================
+   EMPTY STATES
+   ========================================================= */
+
+.jarvis-empty-mini {
+  border: 1px solid rgba(85, 217, 255, 0.14) !important;
+  border-radius: 8px !important;
+  background: rgba(4, 15, 28, 0.52) !important;
+  padding: 9px !important;
+  color: rgba(224, 247, 255, 0.78) !important;
+}
+
+.jarvis-empty-mini b {
+  display: block !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+.jarvis-empty-mini span {
+  display: block !important;
+  margin-top: 4px !important;
+  color: rgba(204, 238, 249, 0.60) !important;
+  font-size: 10px !important;
+  line-height: 1.3 !important;
+}
+
+/* =========================================================
+   HEADER BOT CONTROLS
+   ========================================================= */
+
+.header-bot-controls {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+}
+
+.header-bot-controls button {
+  border: 1px solid rgba(82, 190, 255, 0.35) !important;
+  background: rgba(5, 18, 32, 0.88) !important;
+  color: #d9f6ff !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+}
+
+.header-bot-controls button.active {
+  background: rgba(28, 121, 176, 0.70) !important;
+  border-color: rgba(85, 217, 255, 0.75) !important;
+}
+
+.header-bot-controls button.danger {
+  color: #ffb7b7 !important;
+  border-color: rgba(255, 110, 110, 0.55) !important;
+}
+
+/* =========================================================
+   COINFILTER PAGE SUPPORT
+   ========================================================= */
+
+.cf-control-page {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.cf-action-row {
+  margin-top: 14px !important;
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+
+.cf-parameter-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.cf-parameter-card {
+  display: flex !important;
+  min-width: 0 !important;
+  min-height: 190px !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  padding: 14px !important;
+  border: 1px solid rgba(85, 217, 255, 0.16) !important;
+  border-radius: 12px !important;
+  background: linear-gradient(180deg, rgba(7, 24, 40, 0.84), rgba(3, 13, 24, 0.82)) !important;
+}
+
+.cf-parameter-heading,
+.cf-parameter-meta {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+}
+
+.cf-parameter-heading b,
+.cf-parameter-heading small {
+  display: block !important;
+}
+
+.cf-parameter-heading b {
+  color: #f1fbff !important;
+  font-size: 13px !important;
+}
+
+.cf-parameter-heading small,
+.cf-parameter-card p,
+.cf-parameter-meta {
+  color: rgba(130, 218, 255, 0.66) !important;
+  font-size: 10px !important;
+}
+
+.cf-parameter-card p {
+  min-height: 34px !important;
+  margin: 0 !important;
+  line-height: 1.45 !important;
+}
+
+.cf-parameter-control {
+  margin-top: auto !important;
+}
+
+.cf-parameter-meta {
+  align-items: center !important;
+  border-top: 1px solid rgba(85, 217, 255, 0.1) !important;
+  padding-top: 8px !important;
+}
+
+.cf-table-input {
+  width: 100% !important;
+  min-width: 0 !important;
+  border: 1px solid rgba(85, 217, 255, 0.24) !important;
+  border-radius: 8px !important;
+  background: rgba(4, 14, 26, 0.78) !important;
+  color: #e8fbff !important;
+  padding: 8px 10px !important;
+  font-size: 12px !important;
+  outline: none !important;
+}
+
+.cf-table-input:focus {
+  border-color: rgba(85, 217, 255, 0.72) !important;
+  box-shadow: 0 0 0 2px rgba(85, 217, 255, 0.12) !important;
+}
+
+.cf-readonly-value {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 30px !important;
+  color: rgba(224, 248, 255, 0.72) !important;
+  font-size: 12px !important;
+}
+
+/* =========================================================
+   RESPONSIVE FALLBACK
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .dashboard-flat-page,
+  .dashboard-jarvis-page {
+    width: calc(100vw - 20px) !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: auto !important;
+  }
+
+  .dashboard-jarvis-stage {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .dashboard-left-stack,
+  .dash-jarvis-panel.scan-funnel,
+  .dash-jarvis-panel.empty-slot,
+  .dash-jarvis-panel.no-trade,
+  .dash-jarvis-panel.history {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 160px !important;
+  }
+
+  .dashboard-left-stack {
+    grid-template-rows: auto auto !important;
+  }
+
+  .dashboard-left-stack .dash-jarvis-panel.wallet,
+  .dashboard-left-stack .dash-jarvis-panel.rules {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .dashboard-funnel-flow {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, minmax(80px, auto)) !important;
+    height: auto !important;
+  }
+
+  .dashboard-breakdown-grid {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+  }
+
+  .dashboard-funnel-step {
+    min-height: 100px !important;
+  }
+
+  .dashboard-trade-table-wrap {
+    height: 420px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cf-parameter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .cf-parameter-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cf-action-row .btn {
+    width: 100% !important;
+  }
+}

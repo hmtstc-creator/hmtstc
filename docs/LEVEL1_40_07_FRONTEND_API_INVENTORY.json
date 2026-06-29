@@ -1,0 +1,2255 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-11T19:02:28.054722+00:00",
+  "frontend_js_file_count": 29,
+  "call_count": 94,
+  "unique_endpoint_count": 77,
+  "unique_base_path_count": 74,
+  "method_count": {
+    "DELETE": 3,
+    "GET": 43,
+    "POST": 48
+  },
+  "file_count": {
+    "frontend/js/app/agent.js": 2,
+    "frontend/js/app/api.js": 22,
+    "frontend/js/app/audit.js": 3,
+    "frontend/js/app/auth.js": 4,
+    "frontend/js/app/bot.js": 6,
+    "frontend/js/app/intelligence.js": 1,
+    "frontend/js/app/realApproval.js": 6,
+    "frontend/js/app/realTrade.js": 23,
+    "frontend/js/app/rules.js": 12,
+    "frontend/js/app/settings.js": 7,
+    "frontend/js/app/users.js": 5,
+    "frontend/js/pages/coinFilter.js": 2,
+    "frontend/js/pages/dashboard.js": 1
+  },
+  "top_base_paths": {
+    "/api/settings": 5,
+    "/api/rules": 5,
+    "/api/users": 3,
+    "/api/bot/status": 3,
+    "/api/audit": 3,
+    "/api/users/me/api-connection": 3,
+    "/api/auth/me": 2,
+    "/api/models/reports/export": 2,
+    "/api/real/lock": 2,
+    "/api/rules/save": 2,
+    "/api/agent/chat": 1,
+    "/api/agent/report": 1,
+    "/api/dashboard/bundle": 1,
+    "/api/dashboard": 1,
+    "/api/positions": 1,
+    "/api/history": 1,
+    "/api/logs": 1,
+    "/api/rules/paper-lab/status": 1,
+    "/api/binance/market": 1,
+    "/api/bot/last-scan": 1,
+    "/api/performance": 1,
+    "/api/models/reports": 1,
+    "/api/intelligence/overview": 1,
+    "/api/intelligence/auto-bot-mode-decision": 1,
+    "/api/intelligence/tradeability-decision": 1,
+    "/api/rules/examples": 1,
+    "/api/audit/export": 1,
+    "/api/auth/login": 1,
+    "/api/auth/change-password": 1,
+    "/api/auth/logout": 1
+  },
+  "required_base_paths": [
+    "/api/dashboard/bundle",
+    "/api/settings",
+    "/api/auth/me",
+    "/api/real/readiness"
+  ],
+  "missing_required_base_paths": [],
+  "runtime_policy": {
+    "tracked_runtime_stores": [],
+    "unignored_runtime_stores": [],
+    "allowed_ignored_runtime_stores": [
+      "backend/binance_credentials_store.json",
+      "backend/shadow_store.json"
+    ]
+  },
+  "runtime_leaks": [],
+  "mutating_call_count": 51,
+  "dynamic_call_count": 7,
+  "endpoint_reference_count": 25,
+  "unique_endpoints": [
+    "/api/agent/chat",
+    "/api/agent/report",
+    "/api/audit",
+    "/api/audit/export?{dynamic}",
+    "/api/audit?confirm=CLEAR_AUDIT",
+    "/api/audit?limit=80",
+    "/api/auth/change-password",
+    "/api/auth/login",
+    "/api/auth/logout",
+    "/api/auth/me",
+    "/api/binance/market?limit=100&strict=false",
+    "/api/bot/emergency-stop?action={dynamic}",
+    "/api/bot/last-scan",
+    "/api/bot/reset",
+    "/api/bot/start?mode=paper",
+    "/api/bot/status",
+    "/api/bot/stop",
+    "/api/dashboard",
+    "/api/dashboard/bundle",
+    "/api/history",
+    "/api/intelligence/auto-bot-mode-decision",
+    "/api/intelligence/overview",
+    "/api/intelligence/strategy-generator/accept-draft",
+    "/api/intelligence/tradeability-decision",
+    "/api/logs",
+    "/api/models/real-approval/decision",
+    "/api/models/real-order/dry-run",
+    "/api/models/reports/archive?period=7d",
+    "/api/models/reports/export?period=7d&format=csv",
+    "/api/models/reports/export?period=7d&format=json",
+    "/api/models/reports?period=7d",
+    "/api/performance?start={dynamic}&end={dynamic}",
+    "/api/positions",
+    "/api/real/balances/reconciliation",
+    "/api/real/emergency/checklist",
+    "/api/real/emergency/lock",
+    "/api/real/emergency/recovery-unlock",
+    "/api/real/health",
+    "/api/real/lock",
+    "/api/real/money-separation",
+    "/api/real/orders",
+    "/api/real/orders/dry-run",
+    "/api/real/orders/place",
+    "/api/real/orders/preview",
+    "/api/real/pilot",
+    "/api/real/pilot/report",
+    "/api/real/pilot/start",
+    "/api/real/pilot/stop",
+    "/api/real/positions",
+    "/api/real/positions/emergency-close",
+    "/api/real/positions/reconcile",
+    "/api/real/positions/transition",
+    "/api/real/readiness",
+    "/api/real/unlock",
+    "/api/real/wallet-integrity",
+    "/api/rules",
+    "/api/rules/activate-paper-lab",
+    "/api/rules/auto-paper-lab",
+    "/api/rules/delete",
+    "/api/rules/examples",
+    "/api/rules/get",
+    "/api/rules/paper-lab/status",
+    "/api/rules/save",
+    "/api/rules/selection",
+    "/api/rules/{dynamic}",
+    "/api/settings",
+    "/api/settings/coin-filter",
+    "/api/settings/risk-impact",
+    "/api/settings/risk-preview",
+    "/api/settings/risk-profiles/{dynamic}",
+    "/api/settings/rollback",
+    "/api/settings/rollback-preview",
+    "/api/settings/strategies",
+    "/api/users",
+    "/api/users/me/api-connection",
+    "/api/users/{dynamic}/active",
+    "/api/users/{dynamic}/reset-password"
+  ],
+  "unique_base_paths": [
+    "/api/agent/chat",
+    "/api/agent/report",
+    "/api/audit",
+    "/api/audit/export",
+    "/api/auth/change-password",
+    "/api/auth/login",
+    "/api/auth/logout",
+    "/api/auth/me",
+    "/api/binance/market",
+    "/api/bot/emergency-stop",
+    "/api/bot/last-scan",
+    "/api/bot/reset",
+    "/api/bot/start",
+    "/api/bot/status",
+    "/api/bot/stop",
+    "/api/dashboard",
+    "/api/dashboard/bundle",
+    "/api/history",
+    "/api/intelligence/auto-bot-mode-decision",
+    "/api/intelligence/overview",
+    "/api/intelligence/strategy-generator/accept-draft",
+    "/api/intelligence/tradeability-decision",
+    "/api/logs",
+    "/api/models/real-approval/decision",
+    "/api/models/real-order/dry-run",
+    "/api/models/reports",
+    "/api/models/reports/archive",
+    "/api/models/reports/export",
+    "/api/performance",
+    "/api/positions",
+    "/api/real/balances/reconciliation",
+    "/api/real/emergency/checklist",
+    "/api/real/emergency/lock",
+    "/api/real/emergency/recovery-unlock",
+    "/api/real/health",
+    "/api/real/lock",
+    "/api/real/money-separation",
+    "/api/real/orders",
+    "/api/real/orders/dry-run",
+    "/api/real/orders/place",
+    "/api/real/orders/preview",
+    "/api/real/pilot",
+    "/api/real/pilot/report",
+    "/api/real/pilot/start",
+    "/api/real/pilot/stop",
+    "/api/real/positions",
+    "/api/real/positions/emergency-close",
+    "/api/real/positions/reconcile",
+    "/api/real/positions/transition",
+    "/api/real/readiness",
+    "/api/real/unlock",
+    "/api/real/wallet-integrity",
+    "/api/rules",
+    "/api/rules/activate-paper-lab",
+    "/api/rules/auto-paper-lab",
+    "/api/rules/delete",
+    "/api/rules/examples",
+    "/api/rules/get",
+    "/api/rules/paper-lab/status",
+    "/api/rules/save",
+    "/api/rules/selection",
+    "/api/rules/{dynamic}",
+    "/api/settings",
+    "/api/settings/coin-filter",
+    "/api/settings/risk-impact",
+    "/api/settings/risk-preview",
+    "/api/settings/risk-profiles/{dynamic}",
+    "/api/settings/rollback",
+    "/api/settings/rollback-preview",
+    "/api/settings/strategies",
+    "/api/users",
+    "/api/users/me/api-connection",
+    "/api/users/{dynamic}/active",
+    "/api/users/{dynamic}/reset-password"
+  ],
+  "calls_by_base_path": {
+    "/api/agent/chat": [
+      {
+        "file": "frontend/js/app/agent.js",
+        "line": 131,
+        "method": "POST",
+        "endpoint": "/api/agent/chat",
+        "base_path": "/api/agent/chat",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/agent/report": [
+      {
+        "file": "frontend/js/app/agent.js",
+        "line": 187,
+        "method": "POST",
+        "endpoint": "/api/agent/report",
+        "base_path": "/api/agent/report",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/audit": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 753,
+        "method": "GET",
+        "endpoint": "/api/audit?limit=80",
+        "base_path": "/api/audit",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/audit.js",
+        "line": 25,
+        "method": "POST",
+        "endpoint": "/api/audit",
+        "base_path": "/api/audit",
+        "source_kind": "fetchJson",
+        "mutating": true
+      },
+      {
+        "file": "frontend/js/app/audit.js",
+        "line": 50,
+        "method": "DELETE",
+        "endpoint": "/api/audit?confirm=CLEAR_AUDIT",
+        "base_path": "/api/audit",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/audit/export": [
+      {
+        "file": "frontend/js/app/audit.js",
+        "line": 68,
+        "method": "GET",
+        "endpoint": "/api/audit/export?{dynamic}",
+        "base_path": "/api/audit/export",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/auth/change-password": [
+      {
+        "file": "frontend/js/app/auth.js",
+        "line": 240,
+        "method": "POST",
+        "endpoint": "/api/auth/change-password",
+        "base_path": "/api/auth/change-password",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/auth/login": [
+      {
+        "file": "frontend/js/app/auth.js",
+        "line": 135,
+        "method": "POST",
+        "endpoint": "/api/auth/login",
+        "base_path": "/api/auth/login",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/auth/logout": [
+      {
+        "file": "frontend/js/app/auth.js",
+        "line": 266,
+        "method": "POST",
+        "endpoint": "/api/auth/logout",
+        "base_path": "/api/auth/logout",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/auth/me": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 745,
+        "method": "GET",
+        "endpoint": "/api/auth/me",
+        "base_path": "/api/auth/me",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/auth.js",
+        "line": 29,
+        "method": "GET",
+        "endpoint": "/api/auth/me",
+        "base_path": "/api/auth/me",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/binance/market": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 733,
+        "method": "GET",
+        "endpoint": "/api/binance/market?limit=100&strict=false",
+        "base_path": "/api/binance/market",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/bot/emergency-stop": [
+      {
+        "file": "frontend/js/app/bot.js",
+        "line": 147,
+        "method": "POST",
+        "endpoint": "/api/bot/emergency-stop?action={dynamic}",
+        "base_path": "/api/bot/emergency-stop",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/bot/last-scan": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 737,
+        "method": "GET",
+        "endpoint": "/api/bot/last-scan",
+        "base_path": "/api/bot/last-scan",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/bot/reset": [
+      {
+        "file": "frontend/js/app/bot.js",
+        "line": 193,
+        "method": "POST",
+        "endpoint": "/api/bot/reset",
+        "base_path": "/api/bot/reset",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/bot/start": [
+      {
+        "file": "frontend/js/app/bot.js",
+        "line": 49,
+        "method": "POST",
+        "endpoint": "/api/bot/start?mode=paper",
+        "base_path": "/api/bot/start",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/bot/status": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 593,
+        "method": "GET",
+        "endpoint": "/api/bot/status",
+        "base_path": "/api/bot/status",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/bot.js",
+        "line": 36,
+        "method": "GET",
+        "endpoint": "/api/bot/status",
+        "base_path": "/api/bot/status",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/bot.js",
+        "line": 53,
+        "method": "GET",
+        "endpoint": "/api/bot/status",
+        "base_path": "/api/bot/status",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/bot/stop": [
+      {
+        "file": "frontend/js/app/bot.js",
+        "line": 101,
+        "method": "POST",
+        "endpoint": "/api/bot/stop",
+        "base_path": "/api/bot/stop",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/dashboard": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 588,
+        "method": "GET",
+        "endpoint": "/api/dashboard",
+        "base_path": "/api/dashboard",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/dashboard/bundle": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 541,
+        "method": "GET",
+        "endpoint": "/api/dashboard/bundle",
+        "base_path": "/api/dashboard/bundle",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/history": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 590,
+        "method": "GET",
+        "endpoint": "/api/history",
+        "base_path": "/api/history",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/intelligence/auto-bot-mode-decision": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 761,
+        "method": "GET",
+        "endpoint": "/api/intelligence/auto-bot-mode-decision",
+        "base_path": "/api/intelligence/auto-bot-mode-decision",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/intelligence/overview": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 757,
+        "method": "GET",
+        "endpoint": "/api/intelligence/overview",
+        "base_path": "/api/intelligence/overview",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/intelligence/strategy-generator/accept-draft": [
+      {
+        "file": "frontend/js/app/intelligence.js",
+        "line": 9,
+        "method": "POST",
+        "endpoint": "/api/intelligence/strategy-generator/accept-draft",
+        "base_path": "/api/intelligence/strategy-generator/accept-draft",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/intelligence/tradeability-decision": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 765,
+        "method": "GET",
+        "endpoint": "/api/intelligence/tradeability-decision",
+        "base_path": "/api/intelligence/tradeability-decision",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/logs": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 591,
+        "method": "GET",
+        "endpoint": "/api/logs",
+        "base_path": "/api/logs",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/models/real-approval/decision": [
+      {
+        "file": "frontend/js/app/realApproval.js",
+        "line": 14,
+        "method": "POST",
+        "endpoint": "/api/models/real-approval/decision",
+        "base_path": "/api/models/real-approval/decision",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/models/real-order/dry-run": [
+      {
+        "file": "frontend/js/app/realApproval.js",
+        "line": 108,
+        "method": "POST",
+        "endpoint": "/api/models/real-order/dry-run",
+        "base_path": "/api/models/real-order/dry-run",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/models/reports": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 749,
+        "method": "GET",
+        "endpoint": "/api/models/reports?period=7d",
+        "base_path": "/api/models/reports",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/models/reports/archive": [
+      {
+        "file": "frontend/js/app/realApproval.js",
+        "line": 96,
+        "method": "POST",
+        "endpoint": "/api/models/reports/archive?period=7d",
+        "base_path": "/api/models/reports/archive",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/models/reports/export": [
+      {
+        "file": "frontend/js/app/realApproval.js",
+        "line": 44,
+        "method": "GET",
+        "endpoint": "/api/models/reports/export?period=7d&format=json",
+        "base_path": "/api/models/reports/export",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/realApproval.js",
+        "line": 78,
+        "method": "GET",
+        "endpoint": "/api/models/reports/export?period=7d&format=csv",
+        "base_path": "/api/models/reports/export",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/performance": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 741,
+        "method": "GET",
+        "endpoint": "/api/performance?start={dynamic}&end={dynamic}",
+        "base_path": "/api/performance",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/positions": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 589,
+        "method": "GET",
+        "endpoint": "/api/positions",
+        "base_path": "/api/positions",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/balances/reconciliation": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 12,
+        "method": "GET",
+        "endpoint": "/api/real/balances/reconciliation",
+        "base_path": "/api/real/balances/reconciliation",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/emergency/checklist": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 287,
+        "method": "GET",
+        "endpoint": "/api/real/emergency/checklist",
+        "base_path": "/api/real/emergency/checklist",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/emergency/lock": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 272,
+        "method": "POST",
+        "endpoint": "/api/real/emergency/lock",
+        "base_path": "/api/real/emergency/lock",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/emergency/recovery-unlock": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 305,
+        "method": "POST",
+        "endpoint": "/api/real/emergency/recovery-unlock",
+        "base_path": "/api/real/emergency/recovery-unlock",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/health": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 6,
+        "method": "GET",
+        "endpoint": "/api/real/health",
+        "base_path": "/api/real/health",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/lock": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 57,
+        "method": "POST",
+        "endpoint": "/api/real/lock",
+        "base_path": "/api/real/lock",
+        "source_kind": "fetchJson",
+        "mutating": true
+      },
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 338,
+        "method": "POST",
+        "endpoint": "/api/real/lock",
+        "base_path": "/api/real/lock",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/money-separation": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 11,
+        "method": "GET",
+        "endpoint": "/api/real/money-separation",
+        "base_path": "/api/real/money-separation",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/orders": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 8,
+        "method": "GET",
+        "endpoint": "/api/real/orders",
+        "base_path": "/api/real/orders",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/orders/dry-run": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 103,
+        "method": "POST",
+        "endpoint": "/api/real/orders/dry-run",
+        "base_path": "/api/real/orders/dry-run",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/orders/place": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 137,
+        "method": "POST",
+        "endpoint": "/api/real/orders/place",
+        "base_path": "/api/real/orders/place",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/orders/preview": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 76,
+        "method": "POST",
+        "endpoint": "/api/real/orders/preview",
+        "base_path": "/api/real/orders/preview",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/pilot": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 9,
+        "method": "GET",
+        "endpoint": "/api/real/pilot",
+        "base_path": "/api/real/pilot",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/pilot/report": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 254,
+        "method": "GET",
+        "endpoint": "/api/real/pilot/report",
+        "base_path": "/api/real/pilot/report",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/pilot/start": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 217,
+        "method": "POST",
+        "endpoint": "/api/real/pilot/start",
+        "base_path": "/api/real/pilot/start",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/pilot/stop": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 240,
+        "method": "POST",
+        "endpoint": "/api/real/pilot/stop",
+        "base_path": "/api/real/pilot/stop",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/positions": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 7,
+        "method": "GET",
+        "endpoint": "/api/real/positions",
+        "base_path": "/api/real/positions",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/positions/emergency-close": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 177,
+        "method": "POST",
+        "endpoint": "/api/real/positions/emergency-close",
+        "base_path": "/api/real/positions/emergency-close",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/positions/reconcile": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 160,
+        "method": "POST",
+        "endpoint": "/api/real/positions/reconcile",
+        "base_path": "/api/real/positions/reconcile",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/positions/transition": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 195,
+        "method": "POST",
+        "endpoint": "/api/real/positions/transition",
+        "base_path": "/api/real/positions/transition",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/readiness": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 5,
+        "method": "GET",
+        "endpoint": "/api/real/readiness",
+        "base_path": "/api/real/readiness",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/real/unlock": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 34,
+        "method": "POST",
+        "endpoint": "/api/real/unlock",
+        "base_path": "/api/real/unlock",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/real/wallet-integrity": [
+      {
+        "file": "frontend/js/app/realTrade.js",
+        "line": 10,
+        "method": "GET",
+        "endpoint": "/api/real/wallet-integrity",
+        "base_path": "/api/real/wallet-integrity",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/rules": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 594,
+        "method": "GET",
+        "endpoint": "/api/rules",
+        "base_path": "/api/rules",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 275,
+        "method": "GET",
+        "endpoint": "/api/rules",
+        "base_path": "/api/rules",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 890,
+        "method": "GET",
+        "endpoint": "/api/rules",
+        "base_path": "/api/rules",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 990,
+        "method": "GET",
+        "endpoint": "/api/rules",
+        "base_path": "/api/rules",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 1045,
+        "method": "GET",
+        "endpoint": "/api/rules",
+        "base_path": "/api/rules",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/rules/activate-paper-lab": [
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 738,
+        "method": "POST",
+        "endpoint": "/api/rules/activate-paper-lab",
+        "base_path": "/api/rules/activate-paper-lab",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/rules/auto-paper-lab": [
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 1108,
+        "method": "POST",
+        "endpoint": "/api/rules/auto-paper-lab",
+        "base_path": "/api/rules/auto-paper-lab",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/rules/delete": [
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 516,
+        "method": "POST",
+        "endpoint": "/api/rules/delete",
+        "base_path": "/api/rules/delete",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/rules/examples": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 776,
+        "method": "GET",
+        "endpoint": "/api/rules/examples",
+        "base_path": "/api/rules/examples",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/rules/get": [
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 364,
+        "method": "POST",
+        "endpoint": "/api/rules/get",
+        "base_path": "/api/rules/get",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/rules/paper-lab/status": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 595,
+        "method": "GET",
+        "endpoint": "/api/rules/paper-lab/status",
+        "base_path": "/api/rules/paper-lab/status",
+        "source_kind": "fetchJson",
+        "mutating": false
+      }
+    ],
+    "/api/rules/save": [
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 444,
+        "method": "POST",
+        "endpoint": "/api/rules/save",
+        "base_path": "/api/rules/save",
+        "source_kind": "fetchJson",
+        "mutating": true
+      },
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 1006,
+        "method": "POST",
+        "endpoint": "/api/rules/save",
+        "base_path": "/api/rules/save",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/rules/selection": [
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 604,
+        "method": "POST",
+        "endpoint": "/api/rules/selection",
+        "base_path": "/api/rules/selection",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/rules/{dynamic}": [
+      {
+        "file": "frontend/js/app/rules.js",
+        "line": 526,
+        "method": "DELETE",
+        "endpoint": "/api/rules/{dynamic}",
+        "base_path": "/api/rules/{dynamic}",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/settings": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 592,
+        "method": "GET",
+        "endpoint": "/api/settings",
+        "base_path": "/api/settings",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/settings.js",
+        "line": 515,
+        "method": "POST",
+        "endpoint": "/api/settings",
+        "base_path": "/api/settings",
+        "source_kind": "fetchJson",
+        "mutating": true
+      },
+      {
+        "file": "frontend/js/pages/coinFilter.js",
+        "line": 98,
+        "method": "POST",
+        "endpoint": "/api/settings",
+        "base_path": "/api/settings",
+        "source_kind": "fetchJson",
+        "mutating": true
+      },
+      {
+        "file": "frontend/js/pages/coinFilter.js",
+        "line": 112,
+        "method": "GET",
+        "endpoint": "/api/settings",
+        "base_path": "/api/settings",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/pages/dashboard.js",
+        "line": 53,
+        "method": "POST",
+        "endpoint": "/api/settings",
+        "base_path": "/api/settings",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/settings/coin-filter": [
+      {
+        "file": "frontend/js/app/settings.js",
+        "line": 295,
+        "method": "POST",
+        "endpoint": "/api/settings/coin-filter",
+        "base_path": "/api/settings/coin-filter",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/settings/risk-impact": [
+      {
+        "file": "frontend/js/app/settings.js",
+        "line": 440,
+        "method": "POST",
+        "endpoint": "/api/settings/risk-impact",
+        "base_path": "/api/settings/risk-impact",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/settings/risk-preview": [
+      {
+        "file": "frontend/js/app/settings.js",
+        "line": 415,
+        "method": "POST",
+        "endpoint": "/api/settings/risk-preview",
+        "base_path": "/api/settings/risk-preview",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/settings/risk-profiles/{dynamic}": [
+      {
+        "file": "frontend/js/app/realApproval.js",
+        "line": 32,
+        "method": "POST",
+        "endpoint": "/api/settings/risk-profiles/{dynamic}",
+        "base_path": "/api/settings/risk-profiles/{dynamic}",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/settings/rollback": [
+      {
+        "file": "frontend/js/app/settings.js",
+        "line": 475,
+        "method": "POST",
+        "endpoint": "/api/settings/rollback",
+        "base_path": "/api/settings/rollback",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/settings/rollback-preview": [
+      {
+        "file": "frontend/js/app/settings.js",
+        "line": 457,
+        "method": "POST",
+        "endpoint": "/api/settings/rollback-preview",
+        "base_path": "/api/settings/rollback-preview",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/settings/strategies": [
+      {
+        "file": "frontend/js/app/settings.js",
+        "line": 575,
+        "method": "POST",
+        "endpoint": "/api/settings/strategies",
+        "base_path": "/api/settings/strategies",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/users": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 461,
+        "method": "GET",
+        "endpoint": "/api/users",
+        "base_path": "/api/users",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 783,
+        "method": "GET",
+        "endpoint": "/api/users",
+        "base_path": "/api/users",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/users.js",
+        "line": 17,
+        "method": "POST",
+        "endpoint": "/api/users",
+        "base_path": "/api/users",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/users/me/api-connection": [
+      {
+        "file": "frontend/js/app/api.js",
+        "line": 769,
+        "method": "GET",
+        "endpoint": "/api/users/me/api-connection",
+        "base_path": "/api/users/me/api-connection",
+        "source_kind": "fetchJson",
+        "mutating": false
+      },
+      {
+        "file": "frontend/js/app/users.js",
+        "line": 115,
+        "method": "POST",
+        "endpoint": "/api/users/me/api-connection",
+        "base_path": "/api/users/me/api-connection",
+        "source_kind": "fetchJson",
+        "mutating": true
+      },
+      {
+        "file": "frontend/js/app/users.js",
+        "line": 140,
+        "method": "DELETE",
+        "endpoint": "/api/users/me/api-connection",
+        "base_path": "/api/users/me/api-connection",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/users/{dynamic}/active": [
+      {
+        "file": "frontend/js/app/users.js",
+        "line": 86,
+        "method": "POST",
+        "endpoint": "/api/users/{dynamic}/active",
+        "base_path": "/api/users/{dynamic}/active",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ],
+    "/api/users/{dynamic}/reset-password": [
+      {
+        "file": "frontend/js/app/users.js",
+        "line": 59,
+        "method": "POST",
+        "endpoint": "/api/users/{dynamic}/reset-password",
+        "base_path": "/api/users/{dynamic}/reset-password",
+        "source_kind": "fetchJson",
+        "mutating": true
+      }
+    ]
+  },
+  "calls": [
+    {
+      "file": "frontend/js/app/agent.js",
+      "line": 131,
+      "method": "POST",
+      "endpoint": "/api/agent/chat",
+      "base_path": "/api/agent/chat",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/agent.js",
+      "line": 187,
+      "method": "POST",
+      "endpoint": "/api/agent/report",
+      "base_path": "/api/agent/report",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 461,
+      "method": "GET",
+      "endpoint": "/api/users",
+      "base_path": "/api/users",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 541,
+      "method": "GET",
+      "endpoint": "/api/dashboard/bundle",
+      "base_path": "/api/dashboard/bundle",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 588,
+      "method": "GET",
+      "endpoint": "/api/dashboard",
+      "base_path": "/api/dashboard",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 589,
+      "method": "GET",
+      "endpoint": "/api/positions",
+      "base_path": "/api/positions",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 590,
+      "method": "GET",
+      "endpoint": "/api/history",
+      "base_path": "/api/history",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 591,
+      "method": "GET",
+      "endpoint": "/api/logs",
+      "base_path": "/api/logs",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 592,
+      "method": "GET",
+      "endpoint": "/api/settings",
+      "base_path": "/api/settings",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 593,
+      "method": "GET",
+      "endpoint": "/api/bot/status",
+      "base_path": "/api/bot/status",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 594,
+      "method": "GET",
+      "endpoint": "/api/rules",
+      "base_path": "/api/rules",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 595,
+      "method": "GET",
+      "endpoint": "/api/rules/paper-lab/status",
+      "base_path": "/api/rules/paper-lab/status",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 733,
+      "method": "GET",
+      "endpoint": "/api/binance/market?limit=100&strict=false",
+      "base_path": "/api/binance/market",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 737,
+      "method": "GET",
+      "endpoint": "/api/bot/last-scan",
+      "base_path": "/api/bot/last-scan",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 741,
+      "method": "GET",
+      "endpoint": "/api/performance?start={dynamic}&end={dynamic}",
+      "base_path": "/api/performance",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 745,
+      "method": "GET",
+      "endpoint": "/api/auth/me",
+      "base_path": "/api/auth/me",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 749,
+      "method": "GET",
+      "endpoint": "/api/models/reports?period=7d",
+      "base_path": "/api/models/reports",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 753,
+      "method": "GET",
+      "endpoint": "/api/audit?limit=80",
+      "base_path": "/api/audit",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 757,
+      "method": "GET",
+      "endpoint": "/api/intelligence/overview",
+      "base_path": "/api/intelligence/overview",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 761,
+      "method": "GET",
+      "endpoint": "/api/intelligence/auto-bot-mode-decision",
+      "base_path": "/api/intelligence/auto-bot-mode-decision",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 765,
+      "method": "GET",
+      "endpoint": "/api/intelligence/tradeability-decision",
+      "base_path": "/api/intelligence/tradeability-decision",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 769,
+      "method": "GET",
+      "endpoint": "/api/users/me/api-connection",
+      "base_path": "/api/users/me/api-connection",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 776,
+      "method": "GET",
+      "endpoint": "/api/rules/examples",
+      "base_path": "/api/rules/examples",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 783,
+      "method": "GET",
+      "endpoint": "/api/users",
+      "base_path": "/api/users",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/audit.js",
+      "line": 25,
+      "method": "POST",
+      "endpoint": "/api/audit",
+      "base_path": "/api/audit",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/audit.js",
+      "line": 50,
+      "method": "DELETE",
+      "endpoint": "/api/audit?confirm=CLEAR_AUDIT",
+      "base_path": "/api/audit",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/audit.js",
+      "line": 68,
+      "method": "GET",
+      "endpoint": "/api/audit/export?{dynamic}",
+      "base_path": "/api/audit/export",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/auth.js",
+      "line": 29,
+      "method": "GET",
+      "endpoint": "/api/auth/me",
+      "base_path": "/api/auth/me",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/auth.js",
+      "line": 135,
+      "method": "POST",
+      "endpoint": "/api/auth/login",
+      "base_path": "/api/auth/login",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/auth.js",
+      "line": 240,
+      "method": "POST",
+      "endpoint": "/api/auth/change-password",
+      "base_path": "/api/auth/change-password",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/auth.js",
+      "line": 266,
+      "method": "POST",
+      "endpoint": "/api/auth/logout",
+      "base_path": "/api/auth/logout",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/bot.js",
+      "line": 36,
+      "method": "GET",
+      "endpoint": "/api/bot/status",
+      "base_path": "/api/bot/status",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/bot.js",
+      "line": 49,
+      "method": "POST",
+      "endpoint": "/api/bot/start?mode=paper",
+      "base_path": "/api/bot/start",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/bot.js",
+      "line": 53,
+      "method": "GET",
+      "endpoint": "/api/bot/status",
+      "base_path": "/api/bot/status",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/bot.js",
+      "line": 101,
+      "method": "POST",
+      "endpoint": "/api/bot/stop",
+      "base_path": "/api/bot/stop",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/bot.js",
+      "line": 147,
+      "method": "POST",
+      "endpoint": "/api/bot/emergency-stop?action={dynamic}",
+      "base_path": "/api/bot/emergency-stop",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/bot.js",
+      "line": 193,
+      "method": "POST",
+      "endpoint": "/api/bot/reset",
+      "base_path": "/api/bot/reset",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/intelligence.js",
+      "line": 9,
+      "method": "POST",
+      "endpoint": "/api/intelligence/strategy-generator/accept-draft",
+      "base_path": "/api/intelligence/strategy-generator/accept-draft",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realApproval.js",
+      "line": 14,
+      "method": "POST",
+      "endpoint": "/api/models/real-approval/decision",
+      "base_path": "/api/models/real-approval/decision",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realApproval.js",
+      "line": 32,
+      "method": "POST",
+      "endpoint": "/api/settings/risk-profiles/{dynamic}",
+      "base_path": "/api/settings/risk-profiles/{dynamic}",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realApproval.js",
+      "line": 44,
+      "method": "GET",
+      "endpoint": "/api/models/reports/export?period=7d&format=json",
+      "base_path": "/api/models/reports/export",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realApproval.js",
+      "line": 78,
+      "method": "GET",
+      "endpoint": "/api/models/reports/export?period=7d&format=csv",
+      "base_path": "/api/models/reports/export",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realApproval.js",
+      "line": 96,
+      "method": "POST",
+      "endpoint": "/api/models/reports/archive?period=7d",
+      "base_path": "/api/models/reports/archive",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realApproval.js",
+      "line": 108,
+      "method": "POST",
+      "endpoint": "/api/models/real-order/dry-run",
+      "base_path": "/api/models/real-order/dry-run",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 5,
+      "method": "GET",
+      "endpoint": "/api/real/readiness",
+      "base_path": "/api/real/readiness",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 6,
+      "method": "GET",
+      "endpoint": "/api/real/health",
+      "base_path": "/api/real/health",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 7,
+      "method": "GET",
+      "endpoint": "/api/real/positions",
+      "base_path": "/api/real/positions",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 8,
+      "method": "GET",
+      "endpoint": "/api/real/orders",
+      "base_path": "/api/real/orders",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 9,
+      "method": "GET",
+      "endpoint": "/api/real/pilot",
+      "base_path": "/api/real/pilot",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 10,
+      "method": "GET",
+      "endpoint": "/api/real/wallet-integrity",
+      "base_path": "/api/real/wallet-integrity",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 11,
+      "method": "GET",
+      "endpoint": "/api/real/money-separation",
+      "base_path": "/api/real/money-separation",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 12,
+      "method": "GET",
+      "endpoint": "/api/real/balances/reconciliation",
+      "base_path": "/api/real/balances/reconciliation",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 34,
+      "method": "POST",
+      "endpoint": "/api/real/unlock",
+      "base_path": "/api/real/unlock",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 57,
+      "method": "POST",
+      "endpoint": "/api/real/lock",
+      "base_path": "/api/real/lock",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 76,
+      "method": "POST",
+      "endpoint": "/api/real/orders/preview",
+      "base_path": "/api/real/orders/preview",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 103,
+      "method": "POST",
+      "endpoint": "/api/real/orders/dry-run",
+      "base_path": "/api/real/orders/dry-run",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 137,
+      "method": "POST",
+      "endpoint": "/api/real/orders/place",
+      "base_path": "/api/real/orders/place",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 160,
+      "method": "POST",
+      "endpoint": "/api/real/positions/reconcile",
+      "base_path": "/api/real/positions/reconcile",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 177,
+      "method": "POST",
+      "endpoint": "/api/real/positions/emergency-close",
+      "base_path": "/api/real/positions/emergency-close",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 195,
+      "method": "POST",
+      "endpoint": "/api/real/positions/transition",
+      "base_path": "/api/real/positions/transition",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 217,
+      "method": "POST",
+      "endpoint": "/api/real/pilot/start",
+      "base_path": "/api/real/pilot/start",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 240,
+      "method": "POST",
+      "endpoint": "/api/real/pilot/stop",
+      "base_path": "/api/real/pilot/stop",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 254,
+      "method": "GET",
+      "endpoint": "/api/real/pilot/report",
+      "base_path": "/api/real/pilot/report",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 272,
+      "method": "POST",
+      "endpoint": "/api/real/emergency/lock",
+      "base_path": "/api/real/emergency/lock",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 287,
+      "method": "GET",
+      "endpoint": "/api/real/emergency/checklist",
+      "base_path": "/api/real/emergency/checklist",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 305,
+      "method": "POST",
+      "endpoint": "/api/real/emergency/recovery-unlock",
+      "base_path": "/api/real/emergency/recovery-unlock",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 338,
+      "method": "POST",
+      "endpoint": "/api/real/lock",
+      "base_path": "/api/real/lock",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 275,
+      "method": "GET",
+      "endpoint": "/api/rules",
+      "base_path": "/api/rules",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 364,
+      "method": "POST",
+      "endpoint": "/api/rules/get",
+      "base_path": "/api/rules/get",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 444,
+      "method": "POST",
+      "endpoint": "/api/rules/save",
+      "base_path": "/api/rules/save",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 516,
+      "method": "POST",
+      "endpoint": "/api/rules/delete",
+      "base_path": "/api/rules/delete",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 526,
+      "method": "DELETE",
+      "endpoint": "/api/rules/{dynamic}",
+      "base_path": "/api/rules/{dynamic}",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 604,
+      "method": "POST",
+      "endpoint": "/api/rules/selection",
+      "base_path": "/api/rules/selection",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 738,
+      "method": "POST",
+      "endpoint": "/api/rules/activate-paper-lab",
+      "base_path": "/api/rules/activate-paper-lab",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 890,
+      "method": "GET",
+      "endpoint": "/api/rules",
+      "base_path": "/api/rules",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 990,
+      "method": "GET",
+      "endpoint": "/api/rules",
+      "base_path": "/api/rules",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 1006,
+      "method": "POST",
+      "endpoint": "/api/rules/save",
+      "base_path": "/api/rules/save",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 1045,
+      "method": "GET",
+      "endpoint": "/api/rules",
+      "base_path": "/api/rules",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/app/rules.js",
+      "line": 1108,
+      "method": "POST",
+      "endpoint": "/api/rules/auto-paper-lab",
+      "base_path": "/api/rules/auto-paper-lab",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/settings.js",
+      "line": 295,
+      "method": "POST",
+      "endpoint": "/api/settings/coin-filter",
+      "base_path": "/api/settings/coin-filter",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/settings.js",
+      "line": 415,
+      "method": "POST",
+      "endpoint": "/api/settings/risk-preview",
+      "base_path": "/api/settings/risk-preview",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/settings.js",
+      "line": 440,
+      "method": "POST",
+      "endpoint": "/api/settings/risk-impact",
+      "base_path": "/api/settings/risk-impact",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/settings.js",
+      "line": 457,
+      "method": "POST",
+      "endpoint": "/api/settings/rollback-preview",
+      "base_path": "/api/settings/rollback-preview",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/settings.js",
+      "line": 475,
+      "method": "POST",
+      "endpoint": "/api/settings/rollback",
+      "base_path": "/api/settings/rollback",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/settings.js",
+      "line": 515,
+      "method": "POST",
+      "endpoint": "/api/settings",
+      "base_path": "/api/settings",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/settings.js",
+      "line": 575,
+      "method": "POST",
+      "endpoint": "/api/settings/strategies",
+      "base_path": "/api/settings/strategies",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/users.js",
+      "line": 17,
+      "method": "POST",
+      "endpoint": "/api/users",
+      "base_path": "/api/users",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/users.js",
+      "line": 59,
+      "method": "POST",
+      "endpoint": "/api/users/{dynamic}/reset-password",
+      "base_path": "/api/users/{dynamic}/reset-password",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/users.js",
+      "line": 86,
+      "method": "POST",
+      "endpoint": "/api/users/{dynamic}/active",
+      "base_path": "/api/users/{dynamic}/active",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/users.js",
+      "line": 115,
+      "method": "POST",
+      "endpoint": "/api/users/me/api-connection",
+      "base_path": "/api/users/me/api-connection",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/app/users.js",
+      "line": 140,
+      "method": "DELETE",
+      "endpoint": "/api/users/me/api-connection",
+      "base_path": "/api/users/me/api-connection",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/pages/coinFilter.js",
+      "line": 98,
+      "method": "POST",
+      "endpoint": "/api/settings",
+      "base_path": "/api/settings",
+      "source_kind": "fetchJson",
+      "mutating": true
+    },
+    {
+      "file": "frontend/js/pages/coinFilter.js",
+      "line": 112,
+      "method": "GET",
+      "endpoint": "/api/settings",
+      "base_path": "/api/settings",
+      "source_kind": "fetchJson",
+      "mutating": false
+    },
+    {
+      "file": "frontend/js/pages/dashboard.js",
+      "line": 53,
+      "method": "POST",
+      "endpoint": "/api/settings",
+      "base_path": "/api/settings",
+      "source_kind": "fetchJson",
+      "mutating": true
+    }
+  ],
+  "endpoint_references": [
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 77,
+      "endpoint": "/api/auth/me",
+      "base_path": "/api/auth/me",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 78,
+      "endpoint": "/api/dashboard/bundle",
+      "base_path": "/api/dashboard/bundle",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 79,
+      "endpoint": "/api/rules",
+      "base_path": "/api/rules",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 80,
+      "endpoint": "/api/rules/paper-lab/status",
+      "base_path": "/api/rules/paper-lab/status",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 81,
+      "endpoint": "/api/settings",
+      "base_path": "/api/settings",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/api.js",
+      "line": 82,
+      "endpoint": "/api/bot/status",
+      "base_path": "/api/bot/status",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/audit.js",
+      "line": 77,
+      "endpoint": "/api/audit/export",
+      "base_path": "/api/audit/export",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 39,
+      "endpoint": "/api/real/unlock",
+      "base_path": "/api/real/unlock",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 43,
+      "endpoint": "/api/real/unlock",
+      "base_path": "/api/real/unlock",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 62,
+      "endpoint": "/api/real/lock",
+      "base_path": "/api/real/lock",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 82,
+      "endpoint": "/api/real/orders/preview",
+      "base_path": "/api/real/orders/preview",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 109,
+      "endpoint": "/api/real/orders/dry-run",
+      "base_path": "/api/real/orders/dry-run",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 142,
+      "endpoint": "/api/real/orders/place",
+      "base_path": "/api/real/orders/place",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 146,
+      "endpoint": "/api/real/orders/place",
+      "base_path": "/api/real/orders/place",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 161,
+      "endpoint": "/api/real/positions/reconcile",
+      "base_path": "/api/real/positions/reconcile",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 179,
+      "endpoint": "/api/real/positions/emergency-close",
+      "base_path": "/api/real/positions/emergency-close",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 200,
+      "endpoint": "/api/real/positions/transition",
+      "base_path": "/api/real/positions/transition",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 222,
+      "endpoint": "/api/real/pilot/start",
+      "base_path": "/api/real/pilot/start",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 226,
+      "endpoint": "/api/real/pilot/start",
+      "base_path": "/api/real/pilot/start",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 245,
+      "endpoint": "/api/real/pilot/stop",
+      "base_path": "/api/real/pilot/stop",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 256,
+      "endpoint": "/api/real/pilot/report",
+      "base_path": "/api/real/pilot/report",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 278,
+      "endpoint": "/api/real/emergency/lock",
+      "base_path": "/api/real/emergency/lock",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 289,
+      "endpoint": "/api/real/emergency/checklist",
+      "base_path": "/api/real/emergency/checklist",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 311,
+      "endpoint": "/api/real/emergency/recovery-unlock",
+      "base_path": "/api/real/emergency/recovery-unlock",
+      "source_kind": "reference_only"
+    },
+    {
+      "file": "frontend/js/app/realTrade.js",
+      "line": 315,
+      "endpoint": "/api/real/emergency/recovery-unlock",
+      "base_path": "/api/real/emergency/recovery-unlock",
+      "source_kind": "reference_only"
+    }
+  ]
+}

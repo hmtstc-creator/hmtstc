@@ -1,0 +1,25 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-11T19:39:32.803164+00:00",
+  "state_auth_not_localstorage_truth": true,
+  "state_auth_restore_fields_present": true,
+  "init_restore_gate_present": true,
+  "restore_auth_function_present": true,
+  "restore_auth_401_clears_token": true,
+  "restore_auth_network_keeps_token": true,
+  "login_success_sets_restore_truth": true,
+  "logout_clears_restore_truth": true,
+  "api_sync_auth_restore_guard_present": true,
+  "api_auth_restore_request_kind_present": true,
+  "heavy_10_5_guards_preserved": true,
+  "token_value_not_logged": true,
+  "prior_40_20_ok": true,
+  "prior_40_20_status": "ok",
+  "blockers": [],
+  "recommended_next_actions": [
+    "Keep localStorage token as a restore candidate only, not auth truth.",
+    "Keep /api/auth/me as the startup auth source of truth.",
+    "Keep sync blocked while authRestorePending is true.",
+    "Run 40.21 before opening Paket 11."
+  ]
+}

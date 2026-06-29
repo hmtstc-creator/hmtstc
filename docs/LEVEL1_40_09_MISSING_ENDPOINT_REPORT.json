@@ -1,0 +1,25 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-14T18:59:15.382645+00:00",
+  "source_diff": "docs\\LEVEL1_40_08_API_CONTRACT_DIFF.json",
+  "frontend_call_count": 94,
+  "backend_route_count": 897,
+  "missing_path_count": 0,
+  "method_mismatch_count": 0,
+  "true_blocker_count": 0,
+  "parser_gap_or_false_positive_count": 0,
+  "critical_review_count": 0,
+  "by_category": {},
+  "by_file": {},
+  "missing_paths": [],
+  "method_mismatches": [],
+  "true_blockers": [],
+  "parser_gaps_or_false_positives": [],
+  "critical_items": [],
+  "recommended_next_actions": [
+    "Do not add backend routes solely from static contract findings; review parser output first.",
+    "Keep the frontend inventory extractor limited to real fetch/fetchJson calls.",
+    "Keep parameterized path matching enabled for dynamic URLs such as /api/settings/risk-profiles/{dynamic} and /api/rules/{dynamic}.",
+    "Keep real-trade endpoints under special review even when the contract guard is green."
+  ]
+}

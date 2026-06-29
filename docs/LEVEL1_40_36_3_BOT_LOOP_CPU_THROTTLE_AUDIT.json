@@ -1,0 +1,43 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-14T18:59:10.416130+00:00",
+  "stopped_restore_skips_ensure_bot_loop_running": true,
+  "stopped_scheduler_skips_scan_and_tick": true,
+  "stopped_runtime_probe_has_zero_background_work": true,
+  "scheduler_stops_when_no_requested_users": true,
+  "requested_running_default_true_absent": true,
+  "ensure_loop_rejects_stopped_user": true,
+  "tick_in_progress_guard_present": true,
+  "min_tick_interval_seconds_at_least_30": true,
+  "error_backoff_at_least_60": true,
+  "deep_analysis_cap_at_most_8": true,
+  "api_read_endpoints_do_not_trigger_scan": true,
+  "stop_clears_loop_throttle_state": true,
+  "inflight_tick_respects_persisted_stop": true,
+  "scheduler_can_restart_after_clean_exit": true,
+  "scheduler_start_race_guard_present": true,
+  "prior_40_36_audits_ok": true,
+  "deep_analysis_cap": 8,
+  "endpoint_scan_free": {
+    "dashboard_bundle": true,
+    "positions": true,
+    "bot_status": true,
+    "get_settings": true,
+    "get_rules": true,
+    "my_api_connection": true,
+    "market": true
+  },
+  "prior_audit_statuses": {
+    "40.36": "ok",
+    "40.36.1": "ok",
+    "40.36.2": "ok"
+  },
+  "stopped_runtime_probe": {
+    "ensure": 0,
+    "tick": 0,
+    "save": 0,
+    "restored_any": false,
+    "loop_result": null
+  },
+  "blockers": []
+}

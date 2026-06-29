@@ -1,0 +1,25 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-14T18:59:09.712545+00:00",
+  "first_tick_timeout_seconds_at_most_25": true,
+  "tick_in_progress_finally_reset": true,
+  "failed_bot_clears_requested_running": true,
+  "failed_bot_clears_tick_lock": true,
+  "start_endpoint_does_not_wait_for_first_tick": true,
+  "bot_loop_scan_timeout_present": true,
+  "deep_analysis_timeout_present": true,
+  "network_calls_use_remaining_timeout": true,
+  "cpu_throttle_40_36_3_preserved": true,
+  "last_scan_endpoint_is_cached_store_read": true,
+  "dashboard_bundle_does_not_trigger_scan": true,
+  "public_market_read_has_short_timeout": true,
+  "frontend_start_200_not_generic_error": true,
+  "frontend_first_tick_timeout_message_present": true,
+  "guard_runtime_probe": {
+    "raised": true,
+    "tick_in_progress": false,
+    "last_tick_finished_at": "finished"
+  },
+  "prior_40_36_3_status": "ok",
+  "blockers": []
+}

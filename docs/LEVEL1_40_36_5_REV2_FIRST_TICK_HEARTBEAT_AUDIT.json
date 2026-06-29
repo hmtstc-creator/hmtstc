@@ -1,0 +1,62 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-14T19:28:01.943999+00:00",
+  "first_tick_scan_market_free": true,
+  "first_tick_deep_analysis_free": true,
+  "first_tick_paper_lab_free": true,
+  "first_tick_writes_last_tick": true,
+  "first_tick_finally_unlocks": true,
+  "first_tick_ok_sets_running": true,
+  "first_tick_ok_clears_problem": true,
+  "first_tick_initializes_scan_timestamp": true,
+  "main_preserves_ok_running_state": true,
+  "restore_proof_uses_heartbeat_tick": true,
+  "runtime_truth_allows_startup_scan_grace": true,
+  "frontend_poll_retry_is_nonfatal": true,
+  "frontend_start_200_not_generic_failure": true,
+  "volume_parse_10k_variants": true,
+  "volume_filter_uses_quote_volume": true,
+  "volume_diagnostic_effective_min_10000": true,
+  "volume_rejected_real_quote_volume_present": true,
+  "analysis_diagnostic_basis_present": true,
+  "prior_40_36_3_to_40_36_5_ok": true,
+  "first_tick_probe": {
+    "result_status": "ok",
+    "result_mode": "heartbeat_first_tick",
+    "scan_market_calls": 0,
+    "paper_lab_calls": 0,
+    "last_tick": "2026-06-14T12:00:01+00:00",
+    "last_scan_time": "2026-06-14T12:00:01+00:00",
+    "engine_status": "running",
+    "primary_runtime_problem": null,
+    "tick_in_progress": false
+  },
+  "volume_probe": {
+    "analysis_values": {
+      "10k": 10000.0,
+      "10K": 10000.0,
+      "10,000": 10000.0,
+      "10000": 10000.0,
+      "$10k": 10000.0,
+      "10k USDT": 10000.0
+    },
+    "universe_values": {
+      "10k": 10000.0,
+      "10K": 10000.0,
+      "10,000": 10000.0,
+      "10000": 10000.0,
+      "$10k": 10000.0,
+      "10k USDT": 10000.0
+    },
+    "all_parse_to_10000": true,
+    "effective_min_quote_volume": 10000.0,
+    "low_quote_volume_count": 1,
+    "sample_quote_volume": 9999.0
+  },
+  "prior_audit_statuses": {
+    "40.36.3": "ok",
+    "40.36.4": "ok",
+    "40.36.5": "ok"
+  },
+  "blockers": []
+}

@@ -1,0 +1,72 @@
+# HMTSTC source-safe ignore policy
+# Keep source, docs, tests and deploy templates in Git.
+
+# Python / test cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend cache
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+.playwright/
+playwright-report/
+test-results/
+
+# Local env and secrets
+.env
+*.env
+!.env.example
+backend/.env
+backend/*.env
+!backend/.env.example
+frontend/js/config.local.js
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Runtime stores - VPS/local only, never commit
+# HMTSTC runtime credential/state stores
+backend/binance_credentials_store.json
+backend/auth_store.json
+backend/settings_store.json
+backend/shadow_store.json
+backend/rule_store.json
+backend/paper_lab_store.json
+backend/paper_lab_store.json.*
+backend/eight_hour_report_store.json
+backend/eight_hour_report_store.json.*
+backend/audit_store.json
+backend/real_trade_store.json
+backend/*_store.runtime.json
+backend/runtime_backups/
+backend/*_backup_*.json
+
+# Database / logs / temporary outputs
+*.sqlite
+*.db
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Release artifacts generated outside source tree
+hmtstc_revizyon_*.zip
+hmtstc_revizyon_*.zip.sha256
+
+# Python virtual environments
+venv/
+.venv/
+*/venv/
+*/.venv/

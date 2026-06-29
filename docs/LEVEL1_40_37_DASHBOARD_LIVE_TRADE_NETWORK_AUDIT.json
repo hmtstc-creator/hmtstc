@@ -1,0 +1,32 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-14T19:28:07.756321+00:00",
+  "dashboard_bot_controls_present": true,
+  "header_bot_controls_not_required": true,
+  "live_trade_network_component_present": true,
+  "canvas_does_not_use_image_or_gif": true,
+  "canvas_request_animation_frame_present": true,
+  "canvas_animation_modes_present": true,
+  "dashboard_bundle_endpoint_used": true,
+  "dashboard_bot_status_endpoint_used": true,
+  "dashboard_last_scan_endpoint_used": true,
+  "dashboard_does_not_start_heavy_scan": true,
+  "start_200_avoids_generic_api_error": true,
+  "mobile_responsive_css_present": true,
+  "emergency_stop_dashboard_visible": true,
+  "coinfilter_summary_dashboard_visible": true,
+  "volume_diagnostic_supported": true,
+  "cached_network_source_priority_present": true,
+  "empty_network_message_present": true,
+  "component_assets_loaded": true,
+  "prior_40_36_5_rev2_ok": true,
+  "prior_40_36_5_rev2_status": "ok",
+  "blockers": [],
+  "changed_scope": [
+    "frontend/js/pages/dashboard.js",
+    "frontend/js/components/liveTradeNetwork.js",
+    "frontend/js/app/render.js",
+    "frontend/css/dashboard-live-trade.css",
+    "frontend/index.html"
+  ]
+}
